@@ -18,19 +18,19 @@ def create_folium_map():
 
     # Function to create circles on the map
     def circle_maker(x):
-        confirmed_cases = float(x[2])
+        confirmed_cases = float(x.iloc[2])
         radius = confirmed_cases * 0.5  # Scaling factor for circle size
         if radius < 5:
             radius = 5  # Minimum radius to avoid disappearing circles
 
         folium.Circle(
-            location=[x[0], x[1]],
+            location=[x.iloc[0], x.iloc[1]],
             radius=radius,
             color='red',
             fill=True,
             fill_color='red',  # Fill color for the circle
             fill_opacity=0.6,  # Transparency
-            popup='{}: Confirmed cases: {}'.format(x[3], confirmed_cases)
+            popup='{}: Confirmed cases: {}'.format(x.iloc[3], confirmed_cases)
         ).add_to(m)
 
     corona_df.apply(lambda x: circle_maker(x), axis=1)
