@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+h1, td, tr {
+    color: white;
+}
+
+.table-dark {
+    background-color: #333;
+}
+
+.table-dark td, .table-dark th {
+    color: white;
+}
+
+.container {
+    margin-top: 30px;
+}

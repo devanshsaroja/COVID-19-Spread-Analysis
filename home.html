@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>COVID-19 Spread Analysis</h1>
+    <div class="row">
+        
+        <!-- Table of Top 15 Countries with Confirmed Cases -->
+        <div class="col-4">
+            <h5><font color="red">Top 15 Countries</font></h5>
+            <p>This data comes from a reliable source and represents the top 15 countries with the highest confirmed COVID-19 cases.</p>
+            <table class="table-responsive-sm table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Country</th>
+                        <th scope="col">Confirmed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pair in pairs %}
+                    <tr>
+                        <td>{{ pair[0] }}</td>
+                        <td>{{ pair[1] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Map displaying corona cases with circles -->
+        <div class="col-8">
+            <h5><font color="firebrick">World Map of Corona Cases</font></h5>
+            <p>This map displays the COVID-19 cases worldwide, with circles representing the number of confirmed cases. The bigger the circle, the more significant the impact of COVID-19 in that region.</p>
+            <!-- Embed the folium map -->
+            {{ cmap | safe }}
+        </div>
+        
+    </div>
+</div>
+{% endblock %}
