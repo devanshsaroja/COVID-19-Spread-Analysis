@@ -46,17 +46,17 @@
 - Access dashboard at: http://localhost:5000
 
 ### 📈 Understanding the Dashboard
-- **Top Countries Table**
+- 🏆 Top Countries Table
 - ![Dashboard Screenshot](country%20table.png) 
   - Displays ranked list of most affected countries with:
   - Country name
   - Total confirmed cases
-- **Interactive World Map**
+- 🗺️ Interactive World Map
 - ![Dashboard Screenshot](map.png) 
   - Map Section
   - Circle Size: Proportional to case numbers
   - Color Coding: Red intensity indicates severity
-- **Interactions**
+- 🖱️ Interactions
   - Hover: See location name
   - Click: View detailed case count
  
@@ -70,5 +70,26 @@
   │   └── base.html         # Base template
   └── static/               
       └── style.css         # Custom styling
-- **📃 License**
+
+## 📊 Results and Insights
+
+- 🔴 **Interactive Map Visualization**: The application displays red circular markers on a map, where each circle's size is proportional to the number of confirmed cases in that region.
+- 🌐 **Country-wise Statistics Table**: A dynamic table lists the top affected countries with their total confirmed cases, making it easy to compare severity across nations.
+- 🔍 **Quick Overview**: Users can instantly identify COVID-19 hotspots by hovering over map circles, which display location-specific case data.
+- 📍 **Geographical Distribution**: The map helps visualize how the virus has spread geographically, highlighting densely affected areas.
+- 🧾 **Clean Data Representation**: Null or missing values are removed to ensure reliable and clean data display on both the map and the country table.
+- ⚡ **Fast Performance**: Powered by Flask and optimized with lightweight libraries, the app loads quickly even with a large dataset.
+
+- These insights aim to help users, researchers, and policymakers better understand the global spread and intensity of the COVID-19 pandemic through visual and tabular data representation.
+  
+## 📃 License
 - This project is licensed under the MIT License. 
+
+## 🙏 Acknowledgments
+
+- [Johns Hopkins University CSSE](https://github.com/CSSEGISandData/COVID-19) — for providing open-source COVID-19 dataset.
+- [Folium](https://python-visualization.github.io/folium/) — for interactive map rendering in Python.
+- [Flask](https://flask.palletsprojects.com/) — lightweight framework for building the web interface.
+- Stack Overflow and the Python community — for helping resolve challenges during development.
+
+---
